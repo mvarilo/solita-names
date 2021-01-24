@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Local development
 
-In the project directory, you can run:
+To run the site, run `npm start` and run the prototype backend with `npm run server`. If you're lacking some packages, run `npm install` first.
 
 ### `npm start`
 

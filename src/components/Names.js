@@ -1,15 +1,19 @@
 import React from 'react'
+import { Table } from 'react-bootstrap'
 
 const Names = ({ names }) => {
 
     return (
-        <>
-            {names.map(name => (
-                <p key={name.name}>
-                    {name.name} {name.amount} &nbsp;
-                </p>
-            ))}
-        </>
+        <Table striped>
+            <tbody>
+                {names.map(name => (
+                    <tr key={name.name}>
+                        <td>{name.name}</td>
+                        <td>{name.amount}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </Table>
     );
 }
 
