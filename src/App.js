@@ -12,7 +12,6 @@ const App = () => {
   const [showAll, setShowAll] = useState(true)
 
   useEffect(() => {
-    console.log('effect')
     axios
       .get('http://localhost:3001/names')
       .then(response => {
@@ -55,7 +54,6 @@ const App = () => {
   }
 
   const handleSearchName = (event) => {
-    console.log(event.target.value)
     setSearchName(event.target.value)
     setShowAll(false)
   }
@@ -70,11 +68,9 @@ const App = () => {
         <p>
           <Button onClick={sortNamesByAlphabet}>Sort in alphabetical order</Button>
         </p>
-        <p>
-          <Filter
-            handleSearchName={handleSearchName}
-          />
-        </p>
+        <Filter
+          handleSearchName={handleSearchName}
+        />
       </div>
       <p>Total number of names: {namesTotal}</p>
       <Names names={namesToShow} />
